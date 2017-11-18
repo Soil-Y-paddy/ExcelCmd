@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace consTest
 {
@@ -11,12 +7,11 @@ namespace consTest
 		static void Main(string[] args)
 		{
 			string strLine = Console.ReadLine();
-			char[] aryChar = strLine.ToArray();
+			char[] aryChar = strLine.ToCharArray();
 			for(int nNum = aryChar.Length - 1; nNum > -1; nNum--)
 			{
 				Console.Write(aryChar[nNum]);
 			}
-			Console.WriteLine();
 		}
 	}
 }
