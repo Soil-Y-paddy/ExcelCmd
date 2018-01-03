@@ -19,6 +19,12 @@ Sub testExec()
     Loop
     Result = wExec.StdOut.ReadAll
     Range("Output").Value = Result ' 出力セル
+
+    Error = wExec.StdErr.ReadAll
+    Range("Error").Value = Error	' エラーテストセル
+
+    Range("Length").Value = wExec.ExitCode ' 戻り値セル
+
     
     Set wExec = Nothing
     Set WSH = Nothing
